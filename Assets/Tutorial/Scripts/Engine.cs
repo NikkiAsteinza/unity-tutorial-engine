@@ -49,10 +49,6 @@ namespace Tutorial
             {
                 Instance = this;
             }
-        }
-
-        private void Start()
-        {
             controllerHints = new List<HintBase>();
         }
 

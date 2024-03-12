@@ -1,6 +1,8 @@
+using System;
 using TMPro;
 using Tutorial;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TutorialPanel : MonoBehaviour
@@ -30,6 +32,7 @@ public class TutorialPanel : MonoBehaviour
     {
         Debug.Log("Tutorial button click");
         Engine.Instance.StartTutorial();
+        button.onClick.RemoveListener(StartTutorial);
         button.gameObject.SetActive(false);
     }
 
@@ -44,6 +47,15 @@ public class TutorialPanel : MonoBehaviour
         UpdateStepInfo(
             Engine.Instance.Config.tutorialEndsTitle,
             Engine.Instance.Config.tutorialEndsDescription);
+        button.onClick.AddListener(ChangeScene);
         button.gameObject.SetActive(true);
+    }
+
+    private void ChangeScene()
+    {
+        if (Engine.Instance.Config.changeSceneAtTheEnd)
+        {
+            SceneManager.LoadSceneAsync(Engine.Instance.Config.targetSceneAsset.name);
+        }
     }
 }

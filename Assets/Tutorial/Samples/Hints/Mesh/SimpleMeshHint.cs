@@ -21,9 +21,13 @@ namespace Tutorial.Hints
 
         protected override IEnumerator HighLightCoroutine()
         {
-            bool showingInitialColor = meshRenderer.material.color == initialColor;
-            meshRenderer.material.color = showingInitialColor ? Color.red : initialColor;
-            yield return new WaitForSeconds(1.0f);
+            while (true)
+            {
+                bool showingInitialColor = meshRenderer.material.color == initialColor;
+                meshRenderer.material.color = showingInitialColor ? highlightColor : initialColor;
+                yield return new WaitForSeconds(1.0f);
+            }
+
         }
 
         override protected void Start()
