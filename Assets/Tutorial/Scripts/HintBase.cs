@@ -9,7 +9,7 @@ namespace Tutorial.Hints
     {
         [SerializeField] protected InputActionReference actionReference;
 
-        public InputActionReference ActionReference;
+        public InputActionReference ActionReference => actionReference;
         
         protected IEnumerator highlightCoroutine = null;
         protected Color highlightColor;

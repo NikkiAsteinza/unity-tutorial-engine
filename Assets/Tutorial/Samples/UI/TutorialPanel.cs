@@ -44,5 +44,6 @@ public class TutorialPanel : MonoBehaviour
         UpdateStepInfo(
             Engine.Instance.Config.tutorialEndsTitle,
             Engine.Instance.Config.tutorialEndsDescription);
+        button.gameObject.SetActive(true);
     }
 }

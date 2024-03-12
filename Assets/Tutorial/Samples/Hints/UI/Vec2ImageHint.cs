@@ -1,3 +1,4 @@
+using System.Collections;
 using Tutorial.Hints;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,8 +11,11 @@ public class Vec2ImageHint : HintBase
     [SerializeField] private Image left;
     [SerializeField] private Image rigth;
 
+    private Color initialColor = Color.white;
+
     protected override void ActionPerformedHandler(InputAction.CallbackContext context)
     {
+        StopCoroutine(highlightCoroutine);
         Vector2 inputValue = context.ReadValue<Vector2>();
         ManageVerticalAxis(inputValue, true);
         ManageHorizontalAxis(inputValue, true);
@@ -23,6 +27,18 @@ public class Vec2ImageHint : HintBase
         ManageVerticalAxis(inputValue, false);
         ManageHorizontalAxis(inputValue, false);
     }
+
+    protected override IEnumerator HighLightCoroutine()
+    {   while (true)
+        {
+            up.color = up.color == initialColor ? highlightColor : initialColor;
+            down.color = down.color == initialColor ? highlightColor : initialColor;
+            left.color = left.color == initialColor ? highlightColor : initialColor;
+            rigth.color = rigth.color == initialColor ? highlightColor : initialColor;
+            yield return new WaitForSeconds(1.0f);
+        }
+    }
+
 
     private void ManageHorizontalAxis(Vector2 inputValue, bool pressed)
     {

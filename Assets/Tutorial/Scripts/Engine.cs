@@ -88,7 +88,7 @@ namespace Tutorial
             DoneSteps++;
             currentStep.ActionReference.action.performed -= StepInputPerformed;
 
-            if (currentStepIndex + 1 > guide.Steps.Count)
+            if (currentStepIndex + 1 >= guide.Steps.Count)
             {
                 onFinished.Invoke();
             }
