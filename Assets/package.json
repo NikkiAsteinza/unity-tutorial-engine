@@ -1,9 +1,9 @@
 {
   "name": "com.nikkiasteinza.inputsystembasedtutorial",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "displayName": "Input System Based Tutorial Engine",
   "description": "Some useful tool for input system based tutorials",
-  "unity": "2019.1",
+  "unity": "2022.3",
   "dependencies": {
     "com.unity.inputsystem": "1.7.0",
     "com.unity.textmeshpro": "3.0.6"
