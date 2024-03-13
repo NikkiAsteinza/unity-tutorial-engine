@@ -1,0 +1,23 @@
+{
+  "name": "com.nikkiasteinza.inputsystembasedtutorial",
+  "version": "1.0.0",
+  "displayName": "Input System Based Tutorial Engine",
+  "description": "Some useful tool for input system based tutorials",
+  "unity": "2019.1",
+  "dependencies": {
+    "com.unity.inputsystem": "1.7.0",
+    "com.unity.textmeshpro": "3.0.6"
+  },
+  "author": {
+    "name": "Nikki Asteinza",
+    "email": "nikki.asteinza@gmail.com",
+    "url": "www.linkedin.com/in/nikkiasteinza"
+  },
+  "samples": [
+    {
+      "displayName": "Basic Samples",
+      "description": "Sample usage for image and mesh hints",
+      "path": "Samples~/Basic Samples"
+    }
+  ]
+}
