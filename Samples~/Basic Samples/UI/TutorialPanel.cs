@@ -46,15 +46,19 @@ public class TutorialPanel : MonoBehaviour
         UpdateStepInfo(
             Engine.Instance.Config.EndTitle,
             Engine.Instance.Config.EndDescription);
-        button.onClick.AddListener(ChangeScene);
-        Text buttonText = button.GetComponentInChildren<Text>();
-        buttonText.text = Engine.Instance.Config.FinalButtonText;
-        button.gameObject.SetActive(true);
+
+        if (Engine.Instance.Config.finalButtonToChangeScene)
+        {
+            button.onClick.AddListener(ChangeScene);
+            TMP_Text buttonText = button.GetComponentInChildren<TMP_Text>();
+            buttonText.text = Engine.Instance.Config.FinalButtonText;
+            button.gameObject.SetActive(true);
+        }
     }
 
     private void ChangeScene()
     {
-        if (Engine.Instance.Config.changeScene)
+        if (Engine.Instance.Config.finalButtonToChangeScene)
         {
             SceneManager.LoadSceneAsync(
                 Engine.Instance.Config.TargetSceneName);

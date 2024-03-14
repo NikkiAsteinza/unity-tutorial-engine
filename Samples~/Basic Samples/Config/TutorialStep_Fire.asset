@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c180e49d501dea4ab831541fecff6f3, type: 3}
   m_Name: TutorialStep_Fire
   m_EditorClassIdentifier: 
-  inputActionReference: {fileID: -9109627978361543878, guid: a4e1eec6e6bd70e4d80c6417890e2093, type: 3}
+  inputActionReference: {fileID: -3729750719719314640, guid: d684af36669956644938c26cfc4b02c6, type: 3}
   stepName: Fire
   stepDescription: Try shooting by pressing the space bat
-  isDone: 0
+  isDone: 1

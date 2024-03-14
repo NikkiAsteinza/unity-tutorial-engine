@@ -12,11 +12,11 @@ namespace TutorialEngine
         [SerializeField] private string description;
         [SerializeField] private string endTitle;
         [SerializeField] private string endDescription;
-        [SerializeField] private bool finalButtonToChangeScene = false;
+        public bool finalButtonToChangeScene = false;
 
-        [DrawIf("changeSceneAtTheEnd", true)]
+        [DrawIf("finalButtonToChangeScene", true)]
         [SerializeField] private SceneAsset targetSceneAsset;
-        [DrawIf("changeSceneAtTheEnd", true)]
+        [DrawIf("finalButtonToChangeScene", true)]
         [SerializeField] private string finalButtonText;
 
         public Color HighlightColor => highlightColor;
@@ -26,7 +26,6 @@ namespace TutorialEngine
         public string Description => description;
         public string EndTitle=> endTitle;
         public string EndDescription => endDescription;
-        public bool changeScene => finalButtonToChangeScene;
 
         public string TargetSceneName => targetSceneAsset.name;
         public string FinalButtonText => finalButtonText;

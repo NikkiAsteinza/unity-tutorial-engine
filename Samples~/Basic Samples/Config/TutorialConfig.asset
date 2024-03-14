@@ -19,5 +19,5 @@ MonoBehaviour:
   endTitle: Well done!
   endDescription: Click to continue
   finalButtonToChangeScene: 1
-  targetSceneAsset: {fileID: 102900000, guid: cee872b07b6ad4e4db1fbb2ab5c9d5d0, type: 3}
+  targetSceneAsset: {fileID: 102900000, guid: e5459f6fe806592498df9c49c8cb682e, type: 3}
   finalButtonText: Go to next scene
