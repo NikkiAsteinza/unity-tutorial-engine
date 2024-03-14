@@ -12,6 +12,7 @@ namespace TutorialEngine
         [SerializeField] private string description;
         [SerializeField] private string endTitle;
         [SerializeField] private string endDescription;
+
         public bool finalButtonToChangeScene = false;
 
         [DrawIf("finalButtonToChangeScene", true)]
@@ -24,7 +25,7 @@ namespace TutorialEngine
 
         public string Title => title;
         public string Description => description;
-        public string EndTitle=> endTitle;
+        public string EndTitle => endTitle;
         public string EndDescription => endDescription;
 
         public string TargetSceneName => targetSceneAsset.name;

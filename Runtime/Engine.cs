@@ -80,7 +80,7 @@ namespace TutorialEngine
 
         private void StepInputPerformed(InputAction.CallbackContext context)
         {
-            currentStep.isDone = true;
+            currentStep.SetDone();
             DoneSteps++;
             currentStep.ActionReference.action.performed -= StepInputPerformed;
 
